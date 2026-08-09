@@ -37,6 +37,8 @@ revealables.forEach((el) => io.observe(el));
 
 // ===== Animované počítadlá parametrov =====
 function animateCount(el) {
+  const locale = document.documentElement.lang === "en" ? "en-GB" : "sk-SK";
+  const decimalSep = locale === "en-GB" ? "." : ",";
   const target = parseFloat(el.dataset.count.replace(",", "."));
   const decimals = el.dataset.count.includes(",") ? 2 : 0;
   const dur = 1400;
@@ -46,8 +48,8 @@ function animateCount(el) {
     const p = Math.min((t - t0) / dur, 1);
     const eased = 1 - Math.pow(1 - p, 3);
     let val = (target * eased).toFixed(decimals);
-    if (decimals > 0) val = val.replace(".", ",");
-    else val = Number(val).toLocaleString("sk-SK");
+    if (decimals > 0) val = val.replace(".", decimalSep);
+    else val = Number(val).toLocaleString(locale);
     el.textContent = val;
     if (p < 1) requestAnimationFrame(tick);
   }
