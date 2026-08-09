@@ -107,3 +107,40 @@ if (lb && figs.length) {
     if (e.key === "ArrowRight") show(cur + 1);
   });
 }
+
+// ===== Formulár — odoslanie na pozadí, zákazník ostáva na webe =====
+const form = document.querySelector(".form");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = form.dataset.sending;
+
+    let note = form.querySelector(".form-msg");
+    if (note) note.remove();
+
+    try {
+      const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (!res.ok) throw new Error("send failed");
+      form.innerHTML = `
+        <div class="form-ok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 5-6"/></svg>
+          <p>${form.dataset.success}</p>
+        </div>`;
+    } catch {
+      btn.disabled = false;
+      btn.textContent = original;
+      btn.insertAdjacentHTML(
+        "afterend",
+        `<p class="form-msg form-err">${form.dataset.error}</p>`
+      );
+    }
+  });
+}

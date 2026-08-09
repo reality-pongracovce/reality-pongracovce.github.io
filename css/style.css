@@ -786,6 +786,28 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; letter-spacing
 
 .form .note { font-size: 0.82rem; color: var(--muted); margin-top: 0.9rem; }
 
+.form-ok {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--ink);
+}
+
+.form-ok svg {
+  width: 56px;
+  height: 56px;
+  color: var(--brass-dark);
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.form-ok p { font-size: 1.1rem; font-weight: 600; }
+
+.form-err {
+  color: #a33b2e;
+  font-size: 0.92rem;
+  margin-top: 0.8rem;
+}
+
 /* ---------- Pätička ---------- */
 .foot {
   background: var(--ink);
