@@ -115,7 +115,7 @@ if (mapEl && window.L) {
   const poloha = [49.01745, 20.82452];
   const mapa = L.map(mapEl, {
     center: poloha,
-    zoom: 15,
+    zoom: 13,
     scrollWheelZoom: false,
     zoomSnap: 1,
     wheelPxPerZoomLevel: 120,
