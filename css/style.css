@@ -479,6 +479,8 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; letter-spacing
 }
 
 .gallery figure.wide { grid-column: span 8; }
+.gallery figure.full { grid-column: 1 / -1; }
+.gallery figure.full img { max-height: 520px; }
 
 .gallery img {
   width: 100%;
@@ -791,6 +793,7 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; letter-spacing
   .about, .land, .loc, .contact { grid-template-columns: 1fr; }
   .about-media::before { display: none; }
   .gallery figure, .gallery figure.wide { grid-column: span 6; }
+  .gallery figure.full { grid-column: 1 / -1; }
 }
 
 @media (max-width: 680px) {
