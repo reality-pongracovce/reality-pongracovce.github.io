@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
@@ -265,11 +266,7 @@
   </div>
   <div class="wrap">
     <div class="map-embed reveal">
-      <iframe
-        title="Mapa — poľnohospodársky objekt Pongrácovce"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=20.80953%2C49.00945%2C20.83953%2C49.02545&amp;layer=mapnik&amp;marker=49.01745%2C20.82452"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div id="mapa" data-popup="Poľnohospodársky objekt (s.č. 59)&lt;br&gt;Pongrácovce" aria-label="Mapa — poľnohospodársky objekt Pongrácovce"></div>
       <p class="map-note">Poloha poľnohospodárskeho objektu (s.č. 59) v obci Pongrácovce · <a href="https://www.openstreetmap.org/?mlat=49.01745&amp;mlon=20.82452#map=16/49.01745/20.82452" target="_blank" rel="noopener">zobraziť väčšiu mapu</a></p>
     </div>
   </div>
@@ -384,6 +381,8 @@
   <button class="lb-next" aria-label="Nasledujúca">›</button>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="js/skripty.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "38cc1b49925743389c201ef46da2820f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

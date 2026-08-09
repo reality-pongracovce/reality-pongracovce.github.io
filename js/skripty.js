@@ -108,6 +108,33 @@ if (lb && figs.length) {
   });
 }
 
+// ===== Mapa (Leaflet) — spoľahlivý zoom, koliesko až po kliknutí =====
+const mapEl = document.getElementById("mapa");
+
+if (mapEl && window.L) {
+  const poloha = [49.01745, 20.82452];
+  const mapa = L.map(mapEl, {
+    center: poloha,
+    zoom: 15,
+    scrollWheelZoom: false,
+    zoomSnap: 1,
+    wheelPxPerZoomLevel: 120,
+  });
+
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(mapa);
+
+  L.marker(poloha).addTo(mapa).bindPopup(mapEl.dataset.popup).openPopup();
+
+  mapa.on("click", () => mapa.scrollWheelZoom.enable());
+  mapEl.addEventListener("mouseleave", () => mapa.scrollWheelZoom.disable());
+
+  // prepočet rozmerov po scroll-reveal animácii kontajnera
+  setTimeout(() => mapa.invalidateSize(), 900);
+}
+
 // ===== Formulár — odoslanie na pozadí, zákazník ostáva na webe =====
 const form = document.querySelector(".form");
 
