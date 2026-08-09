@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokalita a kontakt | Hospodárska budova na prenájom, Pongrácovce</title>
+  <meta name="description" content="Kontakt na prenájom hospodárskej budovy s pozemkami v Pongrácovciach. Výborná dostupnosť — 2 km od diaľnice D1, výjazd Behárovce, okres Levoča.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hlavicka">
+  <div class="hlavicka-vnutro">
+    <a class="logo" href="index.html">Prenájom <span>Pongrácovce</span></a>
+    <button class="menu-tlacidlo" aria-label="Otvoriť menu">☰</button>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="galeria.html">Fotogaléria</a></li>
+        <li><a href="pozemky.html">Pozemky a parcely</a></li>
+        <li><a href="kontakt.html" class="aktivna">Lokalita a kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="sekcia">
+  <div class="obsah">
+    <h2>Lokalita</h2>
+    <p class="podnadpis">Obec Pongrácovce leží v okrese Levoča na Spiši. Areál je na okraji obce s priamym prístupom z miestnej komunikácie — a čo je najdôležitejšie, <strong>len 2 km od výjazdu z diaľnice D1 (Behárovce)</strong>.</p>
+
+    <div class="dva-stlpce">
+      <div>
+        <img src="obrazky/dialnica-d1-vzdialenost-2km.jpg" alt="Satelitná snímka trasy z diaľnice D1 do Pongrácoviec — 2 km" loading="lazy">
+        <p style="font-size: 0.88rem; color: var(--text-tlmeny); margin-top: 0.5rem;">Trasa z výjazdu diaľnice D1 Behárovce k areálu — 2 km.</p>
+      </div>
+      <div>
+        <h3 style="color: var(--zelena-tmava); margin-bottom: 0.6rem;">Vzdialenosti</h3>
+        <ul class="vyhody">
+          <li><strong>2 km</strong> — diaľnica D1, výjazd Behárovce</li>
+          <li><strong>~7 km</strong> — Spišské Podhradie (Spišský hrad)</li>
+          <li><strong>~15 km</strong> — Levoča</li>
+          <li><strong>~40 km</strong> — Prešov</li>
+          <li><strong>~45 km</strong> — Poprad</li>
+          <li><strong>~75 km</strong> — Košice</li>
+        </ul>
+        <br>
+        <a class="tlacidlo tlacidlo-obrys" href="https://www.google.com/maps/search/Pongr%C3%A1covce" target="_blank" rel="noopener">Otvoriť obec v Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sekcia sekcia-zelena">
+  <div class="obsah">
+    <h2>Kontakt</h2>
+    <p class="podnadpis">Napíšte nám cez formulár alebo priamo e-mailom. Odpovieme čo najskôr a radi dohodneme osobnú obhliadku areálu.</p>
+
+    <div class="kontakt-mriezka">
+      <div class="kontakt-udaje">
+        <div class="kontakt-karta">
+          <h3>E-mail</h3>
+          <p><a href="mailto:prenajom.pongracovce@gmail.com">prenajom.pongracovce@gmail.com</a></p>
+        </div>
+        <div class="kontakt-karta">
+          <h3>Ponuka</h3>
+          <p>Hospodárska budova 810 m² + prístrešok 130 m² + pozemky ~14 560 m²</p>
+        </div>
+        <div class="kontakt-karta">
+          <h3>Cena</h3>
+          <p>Dohodou — podľa rozsahu a dĺžky prenájmu</p>
+        </div>
+        <div class="kontakt-karta">
+          <h3>Adresa areálu</h3>
+          <p>Pongrácovce (budova s.č. 59), okres Levoča, 053 05</p>
+        </div>
+      </div>
+
+      <form class="formular" action="https://formsubmit.co/prenajom.pongracovce@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Dopyt z webu — prenájom Pongrácovce">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none">
+
+        <label for="meno">Vaše meno</label>
+        <input type="text" id="meno" name="Meno" required autocomplete="name">
+
+        <label for="email">Váš e-mail</label>
+        <input type="email" id="email" name="E-mail" required autocomplete="email">
+
+        <label for="telefon">Telefón (nepovinné)</label>
+        <input type="tel" id="telefon" name="Telefon" autocomplete="tel">
+
+        <label for="sprava">Správa</label>
+        <textarea id="sprava" name="Sprava" rows="6" required placeholder="Dobrý deň, mám záujem o prenájom…"></textarea>
+
+        <button type="submit" class="tlacidlo tlacidlo-hlavne">Odoslať správu</button>
+        <p class="poznamka">Odoslaním formulára súhlasíte so spracovaním uvedených údajov výlučne na účely vybavenia vášho dopytu.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="paticka">
+  <div class="obsah">
+    <div>© 2026 Prenájom Pongrácovce · Hospodárska budova s pozemkami</div>
+    <div><a href="pozemky.html">Údaje o parcelách</a> · <a href="kontakt.html">Kontakt</a></div>
+  </div>
+</footer>
+
+<script src="js/skripty.js"></script>
+</body>
+</html>

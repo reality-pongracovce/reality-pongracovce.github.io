@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotogaléria | Hospodárska budova na prenájom, Pongrácovce</title>
+  <meta name="description" content="Fotografie hospodárskej budovy, kovového prístrešku a pozemkov na prenájom v Pongrácovciach vrátane leteckých snímok s vyznačenými hranicami.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hlavicka">
+  <div class="hlavicka-vnutro">
+    <a class="logo" href="index.html">Prenájom <span>Pongrácovce</span></a>
+    <button class="menu-tlacidlo" aria-label="Otvoriť menu">☰</button>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="galeria.html" class="aktivna">Fotogaléria</a></li>
+        <li><a href="pozemky.html">Pozemky a parcely</a></li>
+        <li><a href="kontakt.html">Lokalita a kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="sekcia">
+  <div class="obsah">
+    <h2>Fotogaléria</h2>
+    <p class="podnadpis">Kliknutím na fotografiu ju zobrazíte v plnej veľkosti. Letecké snímky ukazujú celý súvislý blok pozemkov ohraničený červenou čiarou.</p>
+
+    <div class="galeria-mriezka">
+      <figure>
+        <img src="obrazky/hospodarska-budova-panorama.jpg" alt="Panoramatický pohľad na hospodársku budovu" loading="lazy">
+        <figcaption>Celkový pohľad na hospodársku budovu</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/hospodarska-budova-fasada.jpg" alt="Fasáda hospodárskej budovy s oknami" loading="lazy">
+        <figcaption>Fasáda budovy — rad okien po celej dĺžke</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/pozemky-a-budova.jpg" alt="Pozemky pred hospodárskou budovou" loading="lazy">
+        <figcaption>Trávnaté plochy patriace k areálu</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/kovovy-pristresok-a-budova.jpg" alt="Kovový prístrešok vedľa hospodárskej budovy" loading="lazy">
+        <figcaption>Kovový prístrešok (~130 m²) a budova</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/areal-s-pristreskom.jpg" alt="Areál s prístreškom a budovou" loading="lazy">
+        <figcaption>Pohľad na areál od prístupovej cesty</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/areal-pohlad-od-cesty.jpg" alt="Pohľad na celý areál od cesty" loading="lazy">
+        <figcaption>Celý areál — budova, prístrešok a pozemky</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/letecka-mapa-hranice-pozemkov.jpg" alt="Letecká mapa s vyznačenými hranicami pozemkov" loading="lazy">
+        <figcaption>Letecká snímka — hranice bloku pozemkov (červená čiara)</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/katastralna-mapa-parcely.jpg" alt="Katastrálna mapa s číslami parciel" loading="lazy">
+        <figcaption>Katastrálna mapa s číslami parciel</figcaption>
+      </figure>
+      <figure>
+        <img src="obrazky/dialnica-d1-vzdialenost-2km.jpg" alt="Satelitná snímka trasy z diaľnice D1 do Pongrácoviec" loading="lazy">
+        <figcaption>Trasa z diaľnice D1 (výjazd Behárovce) — len 2 km</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" role="dialog" aria-label="Zväčšená fotografia">
+  <button class="zavriet" aria-label="Zavrieť">✕</button>
+  <button class="predchadzajuci" aria-label="Predchádzajúca fotografia">‹</button>
+  <img src="" alt="">
+  <div class="popisok"></div>
+  <button class="nasledujuci" aria-label="Nasledujúca fotografia">›</button>
+</div>
+
+<footer class="paticka">
+  <div class="obsah">
+    <div>© 2026 Prenájom Pongrácovce · Hospodárska budova s pozemkami</div>
+    <div><a href="pozemky.html">Údaje o parcelách</a> · <a href="kontakt.html">Kontakt</a></div>
+  </div>
+</footer>
+
+<script src="js/skripty.js"></script>
+</body>
+</html>
